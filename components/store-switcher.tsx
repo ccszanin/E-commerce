@@ -53,6 +53,7 @@ const formattedItems = items.map((item) => ({
       size="sm"
       role="combobox"
       aria-expanded={open}
+      aria-label="Select a store"
       className={cn("w-[200px] justify-between", className)}
       >
         <StoreIcon className="mr-2 h-4 w-4"/>
@@ -66,7 +67,7 @@ const formattedItems = items.map((item) => ({
             <CommandInput placeholder="Search store..."/>
             <CommandEmpty>No store found.</CommandEmpty>
             <CommandGroup heading="Stores">
-                {formattedItems.map((store)=> (
+                {formattedItems.map((store) => (
                    <CommandItem
                    key={store.value}
                    onSelect={() => onStoreSelect(store)}
